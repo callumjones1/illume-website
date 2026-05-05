@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>illume — Automated Social Media for Academic Journals</title>
+    <title>illume research — Coming Soon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -21,7 +22,7 @@
     <div class="nav-overlay" id="navOverlay">
         <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
         <ul class="nav-overlay-menu">
-            <li><a href="#home" class="nav-overlay-link">Home</a></li>
+            <li><a href="index.html" class="nav-overlay-link">Home</a></li>
             <li><a href="reach.html" class="nav-overlay-link">Reach</a></li>
             <li><a href="nexus.html" class="nav-overlay-link">Nexus</a></li>
             <li><a href="research.html" class="nav-overlay-link">Research</a></li>
@@ -29,24 +30,21 @@
         </ul>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <video class="hero-video" id="heroV1" autoplay muted playsinline>
-            <source src="video/hero.mp4" type="video/mp4">
-            <source src="video/hero.webm" type="video/webm">
-        </video>
-        <video class="hero-video hero-video-standby" id="heroV2" muted playsinline>
-            <source src="video/hero.mp4" type="video/mp4">
-            <source src="video/hero.webm" type="video/webm">
-        </video>
-        <div class="hero-video-overlay"></div>
-        <div class="hero-center">
-            <img src="logo-transparent.png" alt="illume" class="hero-logo">
-            <div class="hero-links">
-                <a href="reach.html" class="hero-link">reach</a>
-                <a href="nexus.html" class="hero-link">nexus</a>
-                <a href="research.html" class="hero-link">research</a>
-            </div>
+    <!-- Hero -->
+    <section class="rp-hero">
+        <div class="rp-hero-content">
+            <a href="index.html" class="rp-eyebrow">illume</a>
+            <h1 class="rp-title">research</h1>
+            <p class="rp-tagline">Something new is coming.<br>More details soon.</p>
+            <a href="mailto:contact@illume.com" class="rp-btn">Get in touch</a>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="rp-section">
+        <div class="rp-container">
+            <hr class="rp-rule">
+            <p class="rp-intro">illume research is currently in development. We'll be sharing more details as we get closer to launch. If you'd like to be among the first to know, reach out and we'll keep you posted.</p>
         </div>
     </section>
 

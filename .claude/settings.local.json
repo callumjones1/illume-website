@@ -6,7 +6,9 @@
       "Bash(Select-Object FullName)",
       "Bash(Sort-Object FullName)",
       "Bash(Format-Table -AutoSize)",
-      "PowerShell(New-Item *)"
+      "PowerShell(New-Item *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\illume-website\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)"
     ]
   }
 }
