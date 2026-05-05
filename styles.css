@@ -313,11 +313,10 @@ body {
 /* ─── Reach Page ─────────────────────────────────────── */
 
 .rp-hero {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 140px 80px 100px;
+    padding: 60px 80px 80px;
     position: relative;
     background: var(--bg-dark);
 }
@@ -338,11 +337,17 @@ body {
 
 .rp-eyebrow {
     display: block;
-    font-size: 13px;
+    font-size: 22px;
     color: var(--text-muted);
-    letter-spacing: 0.12em;
-    font-weight: 400;
-    margin-bottom: 10px;
+    letter-spacing: 0.06em;
+    font-weight: 300;
+    margin-bottom: 12px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rp-eyebrow:hover {
+    color: white;
 }
 
 .rp-title {
@@ -386,6 +391,11 @@ body {
     padding: 0 80px;
 }
 
+.rp-container--wide {
+    max-width: none;
+    padding: 0 80px;
+}
+
 .rp-section {
     padding: 0 0 100px;
     background: var(--bg-dark);
@@ -414,10 +424,33 @@ body {
     max-width: 720px;
 }
 
+.rp-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    color: rgba(255,255,255,0.38);
+}
+
 .rp-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 52px 80px;
+    gap: 16px 24px;
+}
+
+.rp-feature {
+    padding: 28px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rp-feature:hover {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 0 48px rgba(255,255,255,0.05), 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .rp-feature h3 {
@@ -438,13 +471,23 @@ body {
 .rp-steps {
     display: flex;
     flex-direction: column;
-    gap: 44px;
+    gap: 10px;
 }
 
 .rp-step {
     display: flex;
     gap: 44px;
     align-items: flex-start;
+    padding: 28px 32px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rp-step:hover {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 0 48px rgba(255,255,255,0.05), 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .rp-step-num {
@@ -469,6 +512,26 @@ body {
     color: var(--text-secondary);
     line-height: 1.75;
     font-weight: 300;
+}
+
+.rp-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: start;
+}
+
+.rp-split-col:first-child {
+    padding-right: 48px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.rp-split-col:last-child {
+    padding-left: 48px;
+}
+
+.rp-split-col .rp-features {
+    grid-template-columns: 1fr;
 }
 
 .rp-pricing {
@@ -536,11 +599,14 @@ body {
 }
 
 @media (max-width: 768px) {
-    .rp-hero { padding: 120px 32px 80px; }
+    .rp-hero { padding: 80px 32px 60px; }
     .rp-back { left: 32px; }
     .rp-title { letter-spacing: -2px; }
     .rp-container { padding: 0 32px; }
-    .rp-features { grid-template-columns: 1fr; gap: 40px; }
+    .rp-features { grid-template-columns: 1fr; gap: 12px; }
+    .rp-split { grid-template-columns: 1fr; }
+    .rp-split-col:first-child { padding-right: 0; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 48px; margin-bottom: 48px; }
+    .rp-split-col:last-child { padding-left: 0; }
     .rp-plan { grid-template-columns: 1fr; gap: 6px; }
     .rp-plan-price { text-align: left; }
 }
