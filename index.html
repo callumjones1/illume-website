@@ -3,319 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>outreachr - AI-Powered LinkedIn Automation for Academic Journals</title>
+    <title>illume — Automated Social Media for Academic Journals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="logo.png" alt="outreachr" class="logo-image">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <a href="#contact" class="btn-secondary">Get Started</a>
-            </div>
-        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+    <div class="nav-overlay" id="navOverlay">
+        <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+        <ul class="nav-overlay-menu">
+            <li><a href="#home" class="nav-overlay-link">Home</a></li>
+            <li><a href="reach.html" class="nav-overlay-link">Reach</a></li>
+            <li><a href="nexus.html" class="nav-overlay-link">Nexus</a></li>
+            <li><a href="research.html" class="nav-overlay-link">Research</a></li>
+            <li><a href="mailto:contact@illume.com" class="nav-overlay-link">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    Amplify your journal's research impact on
-                    <span class="highlight">LinkedIn.</span>
-                </h1>
-                <p class="hero-subtitle">
-                    AI-powered content generation and automated posting for academic journals.
-                    Reach thousands of professionals with engaging posts crafted from your latest research.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Start Free Trial</a>
-                    <a href="#how-it-works" class="btn-outline">See How It Works</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">10K+</div>
-                        <div class="stat-label">Posts Generated</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Journals Served</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">Engagement Increase</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-decoration"></div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What We Offer</h2>
-                <p class="section-subtitle">End-to-end LinkedIn automation designed specifically for academic journals</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    </div>
-                    <h3>AI Content Generation</h3>
-                    <p>Transform complex research abstracts into engaging, professional LinkedIn posts using advanced AI (Claude & OpenAI).</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                    </div>
-                    <h3>Multi-Source Integration</h3>
-                    <p>Seamlessly fetch articles from your database, Scopus API, or custom data sources. We handle all the technical complexity.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <h3>Automated Posting</h3>
-                    <p>Set it and forget it. Schedule posts weeks in advance with our Google Sheets + Zapier integration.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <h3>Smart Deduplication</h3>
-                    <p>Never post the same article twice. Our system tracks all published posts and prevents duplicates automatically.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                    </div>
-                    <h3>Custom Tone & Style</h3>
-                    <p>Choose from professional, engaging, casual, or academic styles. Each post matches your journal's brand voice.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                    </div>
-                    <h3>Analytics & Insights</h3>
-                    <p>Track performance, engagement metrics, and optimize your posting strategy with detailed analytics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Four simple steps to automated research outreach</p>
-            </div>
-            <div class="workflow">
-                <div class="workflow-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Connect Your Data</h3>
-                        <p>Link your research database, Scopus account, or provide us with article feeds. We support multiple data sources.</p>
-                    </div>
-                </div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>AI Generates Posts</h3>
-                        <p>Our AI analyzes abstracts and creates compelling LinkedIn content that highlights key findings and impact.</p>
-                    </div>
-                </div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Review & Approve</h3>
-                        <p>Review generated posts in your dashboard or enable auto-approval for fully hands-free operation.</p>
-                    </div>
-                </div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Automated Publishing</h3>
-                        <p>Posts go live on your schedule via our Zapier integration. Sit back and watch engagement grow.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">Choose the plan that fits your journal's publishing frequency</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">199</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Up to 50 posts/month</li>
-                        <li>✓ AI content generation (OpenAI)</li>
-                        <li>✓ Database integration</li>
-                        <li>✓ Manual review & approval</li>
-                        <li>✓ Basic analytics</li>
-                        <li>✓ Email support</li>
-                    </ul>
-                    <a href="#contact" class="btn-pricing">Get Started</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Professional</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">399</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Up to 150 posts/month</li>
-                        <li>✓ AI content (Claude & OpenAI)</li>
-                        <li>✓ All integrations (DB, Scopus, custom)</li>
-                        <li>✓ Auto-approval option</li>
-                        <li>✓ Advanced analytics & insights</li>
-                        <li>✓ Priority support</li>
-                        <li>✓ Custom posting schedule</li>
-                        <li>✓ Multiple style templates</li>
-                    </ul>
-                    <a href="#contact" class="btn-pricing primary">Get Started</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Enterprise</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">799</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Unlimited posts</li>
-                        <li>✓ Premium AI models</li>
-                        <li>✓ All integrations + custom builds</li>
-                        <li>✓ Full automation</li>
-                        <li>✓ White-label dashboard</li>
-                        <li>✓ Dedicated account manager</li>
-                        <li>✓ Custom workflows</li>
-                        <li>✓ Multi-journal support</li>
-                        <li>✓ API access</li>
-                    </ul>
-                    <a href="#contact" class="btn-pricing">Contact Sales</a>
-                </div>
-            </div>
-            <div class="pricing-footer">
-                <p>All plans include a 14-day free trial. No credit card required.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof -->
-    <section class="social-proof">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Trusted by Leading Journals</h2>
-            </div>
-            <div class="testimonials">
-                <div class="testimonial-card">
-                    <div class="quote">"outreachr transformed our LinkedIn presence. We've seen a 300% increase in engagement since implementing their automation."</div>
-                    <div class="author">
-                        <div class="author-name">Dr. Sarah Mitchell</div>
-                        <div class="author-title">Editor-in-Chief, Resources Conservation & Recycling</div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote">"The AI-generated content is remarkably accurate and engaging. It saves us 10+ hours per week while maintaining our professional voice."</div>
-                    <div class="author">
-                        <div class="author-name">Prof. James Chen</div>
-                        <div class="author-title">Managing Editor, Environmental Science Journal</div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote">"Setup was seamless and the support team is exceptional. We're now consistently reaching 50K+ professionals with each post."</div>
-                    <div class="author">
-                        <div class="author-name">Dr. Emily Rodriguez</div>
-                        <div class="author-title">Social Media Director, Sustainability Research Quarterly</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to amplify your research impact?</h2>
-                <p>Join leading journals who trust outreachr to automate their LinkedIn outreach. Start your free 14-day trial today.</p>
-                <div class="cta-buttons">
-                    <a href="mailto:contact@outreachr.com" class="btn-primary large">Start Free Trial</a>
-                    <a href="mailto:contact@outreachr.com" class="btn-outline large">Schedule Demo</a>
-                </div>
+        <video class="hero-video" id="heroV1" autoplay muted playsinline>
+            <source src="video/hero.mp4" type="video/mp4">
+            <source src="video/hero.webm" type="video/webm">
+        </video>
+        <video class="hero-video hero-video-standby" id="heroV2" muted playsinline>
+            <source src="video/hero.mp4" type="video/mp4">
+            <source src="video/hero.webm" type="video/webm">
+        </video>
+        <div class="hero-video-overlay"></div>
+        <div class="hero-center">
+            <img src="logo-transparent.png" alt="illume" class="hero-logo">
+            <div class="hero-links">
+                <a href="reach.html" class="hero-link">reach</a>
+                <a href="nexus.html" class="hero-link">nexus</a>
+                <a href="research.html" class="hero-link">research</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="logo.png" alt="outreachr" class="logo-image">
-                    </div>
-                    <p>AI-powered LinkedIn automation for academic journals. Amplify your research impact effortlessly.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="mailto:contact@outreachr.com">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:contact@outreachr.com">contact@outreachr.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 outreachr. All rights reserved.</p>
+        <div class="footer-inner">
+            <img src="logo-transparent.png" alt="illume" class="footer-logo-img">
+            <div class="footer-right">
+                <p class="footer-copy">&copy; 2025 illume. All rights reserved.</p>
+                <a href="mailto:contact@illume.com" class="footer-contact">contact@illume.com</a>
             </div>
         </div>
     </footer>

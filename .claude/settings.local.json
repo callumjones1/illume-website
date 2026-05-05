@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:lucentgroup.com.au)",
+      "Bash(Get-ChildItem -Path \"C:\\\\illume-website\" -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(New-Item *)"
+    ]
+  }
+}
