@@ -174,7 +174,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -329,7 +329,7 @@ body {
 }
 
 .hp-panel--light {
-    background: #ffffff;
+    background: #f2f1ef;
 }
 
 .hp-panel--dark {
@@ -342,11 +342,11 @@ body {
 }
 
 .hp-title {
-    font-size: clamp(48px, 6vw, 80px);
+    font-size: clamp(30px, 3.5vw, 44px);
     font-weight: 300;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     line-height: 1;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
 }
 
 .hp-panel--light .hp-title {
@@ -428,6 +428,28 @@ body {
 
 .hp-panel--light .hp-feature p {
     color: #555555;
+}
+
+.hp-panel--dark .hp-feature {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.hp-panel--dark .hp-feature:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.hp-panel--dark .hp-feature-icon {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.hp-panel--dark .hp-feature h3 {
+    color: #ffffff;
+}
+
+.hp-panel--dark .hp-feature p {
+    color: var(--text-secondary);
 }
 
 .hp-btn {
