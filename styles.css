@@ -174,7 +174,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 150vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,11 +342,11 @@ body {
 }
 
 .hp-title {
-    font-size: clamp(30px, 3.5vw, 44px);
+    font-size: clamp(26px, 3vw, 38px);
     font-weight: 300;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
     line-height: 1;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .hp-panel--light .hp-title {
@@ -375,9 +375,8 @@ body {
 
 .hp-features {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    max-width: 560px;
     margin-bottom: 52px;
 }
 
@@ -482,6 +481,12 @@ body {
     border-color: #ffffff;
 }
 
+@media (max-width: 900px) {
+    .hp-features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .hp-panel {
         padding: 72px 32px;
@@ -574,7 +579,8 @@ body {
 }
 
 .rp-container--wide {
-    max-width: none;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 80px;
 }
 
@@ -867,4 +873,108 @@ body {
 .pp-link:hover {
     color: white;
     border-color: white;
+}
+
+/* ─── Light Section Variant (product pages) ─────────── */
+
+.rp-section--light {
+    background: #f2f1ef;
+}
+
+.rp-section--light .rp-rule {
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.rp-section--light .rp-label {
+    color: #999999;
+}
+
+.rp-section--light .rp-intro {
+    color: #333333;
+}
+
+.rp-section--light .rp-icon {
+    color: rgba(0, 0, 0, 0.28);
+}
+
+.rp-section--light .rp-feature {
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+.rp-section--light .rp-feature:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.rp-section--light .rp-feature h3 {
+    color: #0a0a0a;
+}
+
+.rp-section--light .rp-feature p {
+    color: #555555;
+}
+
+.rp-section--light .rp-step {
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+.rp-section--light .rp-step:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.rp-section--light .rp-step-num {
+    color: #bbbbbb;
+}
+
+.rp-section--light .rp-step-body h3 {
+    color: #0a0a0a;
+}
+
+.rp-section--light .rp-step-body p {
+    color: #555555;
+}
+
+.rp-section--light .rp-split-col:first-child {
+    border-right-color: rgba(0, 0, 0, 0.08);
+}
+
+.rp-section--light .rp-plan {
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+.rp-section--light .rp-plan-name {
+    color: #0a0a0a;
+}
+
+.rp-section--light .rp-plan-detail {
+    color: #666666;
+}
+
+.rp-section--light .rp-plan-price {
+    color: #0a0a0a;
+}
+
+.rp-section--light .rp-plan-price span {
+    color: #999999;
+}
+
+.rp-section--light .rp-pricing-note {
+    color: #999999;
+}
+
+.rp-section--light .rp-cta h2 {
+    color: #0a0a0a;
+}
+
+.rp-section--light .rp-btn {
+    color: rgba(0, 0, 0, 0.55);
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+.rp-section--light .rp-btn:hover {
+    color: #0a0a0a;
+    border-bottom-color: #0a0a0a;
 }
