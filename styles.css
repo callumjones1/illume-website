@@ -572,6 +572,24 @@ body {
     border-color: white;
 }
 
+.rp-signin {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.rp-signin a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.35);
+    transition: color 0.3s;
+}
+
+.rp-signin a:hover {
+    color: white;
+}
+
 .rp-container {
     max-width: 960px;
     margin: 0 auto;
